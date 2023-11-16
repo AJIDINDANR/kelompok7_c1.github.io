@@ -1,0 +1,794 @@
+/* ABOUT US */
+#about {
+    padding: 50px 0; /* Sesuaikan dengan kebutuhan */
+}
+
+/* MENU */
+#menu {
+    padding: 50px 0; /* Sesuaikan dengan kebutuhan */
+}
+
+/* LOKASI */
+#lokasi {
+    padding: 100px 0; /* Sesuaikan dengan kebutuhan */
+}
+
+/* ORDER ONLINE */
+#pesanan {
+    padding: 100px 0; /* Sesuaikan dengan kebutuhan */
+}
+
+/* CONTACT US */
+#kontak {
+    padding: 60px 0; /* Sesuaikan dengan kebutuhan */
+}
+
+/* CUSTOMER REVIEWS */
+#review {
+    padding: 70px 0; /* Sesuaikan dengan kebutuhan */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    background-color: #FFA500;
+}
+
+/* navbar */
+.navbar {
+    background-color: #ce0000;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+}
+
+.menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    display: none; 
+}
+
+.menu-navbar {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-navbar li {
+    margin-right: 20px;
+}
+
+.menu-navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Tambahkan transition untuk warna teks */
+}
+
+.menu-navbar a:hover {
+    background-color: #f6f7f8; 
+    color: #ce0000; 
+}
+
+.menu-navbar a:active {
+    background-color: #fff; 
+    color: #ce0000; 
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; 
+    }
+
+    .menu-navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #ce0000;
+        z-index: 1;
+    }
+
+    .menu-navbar.show {
+        display: flex; 
+    }
+    .menu-navbar li {
+        margin-right: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+}
+
+
+h1 {
+    text-align: center;
+    color: #ce0000; 
+    font-size: 2em; 
+    margin-bottom: 20px; 
+}
+
+/* HOME */
+#Home {
+    
+    background-color: #FFA500;
+}
+
+.container {
+    background-color: #FFA500;
+    padding: 80px 0 0 0;
+}
+
+
+
+.content-slide {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+
+.imgslide {
+    border-radius: 10px; 
+    overflow: hidden; 
+    height: 600px; 
+}
+
+
+img {
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    color: rgb(255, 254, 224);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(0, 0, 0);
+}
+
+.content-slide .numberslide {
+    color: #ffffff;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+
+.imgslide img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .imgslide {
+        height: 400px; 
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .imgslide {
+        height: 300px; 
+    }
+}
+
+
+.about-section {
+    background-color: #f8f8f8;
+    padding: 80px 0;
+    margin: 0 auto; 
+    max-width: 1200px; 
+}
+
+.box-container {
+    max-width: 1000px;
+    margin-top: 100px;
+    margin-bottom: 100px; 
+    margin: 0 auto; 
+}
+
+.about-box {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.about-box h2 {
+    color: #ce0000;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-box p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+
+
+/* menu */
+#menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.menu-item {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px); 
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item h2 {
+    color: #ce0000;
+    margin-bottom: 10px;
+}
+
+.menu-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    color: #666;
+    text-align: justify;
+}
+
+.harga {
+    color: #ce0000;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Media query untuk tata letak responsif */
+@media screen and (max-width: 768px) {
+    .menu-item {
+        width: calc(50% - 20px); 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu-item {
+        width: calc(100% - 20px); 
+    }
+}
+
+
+/* lokasi */
+
+#lokasi {
+    background-color: #f7f7f7; 
+    padding: 10px 0; 
+    text-align: center;
+}
+
+#lokasi h2 {
+    color: #ce0000; 
+    font-size: 2em; 
+    margin-bottom: 20px; 
+}
+
+#map-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+iframe {
+    border: 0;
+    width: 100%;
+    height: 300px;
+}
+
+
+#lokasi:hover {
+    background-color: #e0e0e0;
+}
+
+
+#map-container:hover iframe {
+    filter: brightness(90%);
+    transition: filter 0.3s ease-in-out;
+}
+
+/* pesanmakan.php */
+
+h1 {
+    text-align: center;
+    color: #ce0000;
+}
+
+hr {
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+.textfield {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.login-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #45a049;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4caf50;
+    color: white;
+}
+
+.action {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn, .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-btn svg, .delete-btn svg {
+    fill: white;
+    height: 20px;
+    width: 20px;
+}
+
+/* table pesan makan */
+#pesanan {
+    text-align: center;
+    margin: 30px 0;
+    padding: 20px; 
+}
+
+#pesanan .kurir-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+#pesanan img {
+    width: 150px; 
+    height: auto;
+    border: 2px solid #333;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+#pesanan img:hover {
+    transform: scale(1.1);
+}
+
+#pesanan h2 {
+    color: #ce0000;
+    margin-top: 10px;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#pesanan h2 {
+    animation: fadeIn 1s ease-in-out;
+}
+
+ 
+/* contact.php */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+
+#successMessage {
+    color: #4caf50;
+    text-align: center;
+}
+
+/* contact us */
+#kontak {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #FFA500;
+}
+
+.kurir-link {
+    display: inline-block;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.kurir-link img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.kurir-link img:hover {
+    transform: scale(1.1);
+}
+
+h2 {
+    font-size: 2em;
+    color: #ce0000;
+    margin-top: 20px;
+}
+  
+/* review di index */
+#review {
+    background-color: #f8f8f8;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.review-container {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+
+.review-item {
+    min-width: 300px; 
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+
+
+
+/* Responsive */
+@media (max-width: 767px) {
+    #review h3 {
+        font-size: 2em;
+    }
+
+    .review-card {
+        padding: 15px;
+    }
+}
+
+
+
+/* resposive */
+
+@media (max-width: 768px) {
+    #map-container iframe {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .content-slide {
+        padding: 8px 50px 12px 50px;
+    }
+
+    .next {
+        right: 50px;
+        border-radius: 3px 0 0 3px;
+    }
+    
+    
+
+
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }    
+    to {
+        opacity: 1;
+    }
+}
+
+.container .page {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.page .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    border-radius: 50%;
+}
+
+.page .active,
+.page .dot:hover {
+    background-color: #ce0000;
+}
+
+
+/* Footer Styles */
+
+.footer {
+    background-color: #ce0000;
+    color: #fff;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+}
+
+.footer-social {
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #FFA500;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+
+.username {
+    color: black; 
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.username a {
+    color: #F8EDEB; 
+    text-decoration: underline;
+}
+
+
+/* review */
+.review-section {
+    max-width: 800px;
+    margin: auto;
+    margin-top: 20px;
+    display: block; 
+}
+
+.ulasan {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.reviews-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.review-slide {
+    flex: 0 0 auto;
+    width: calc(100% - 20px); 
+    margin-right: 20px; 
+    scroll-snap-align: start;
+}
+
+.review-box {
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+#reviewForm {
+    max-width: 100%;
+}
+
+
+
+@keyframes flash {
+    0% { background-color: #ffcccc; }
+    50% { background-color: #ffcc00; }
+    100% { background-color: #ffcccc; }
+  }
+  
+  .warning {
+    width: 100%;
+    background-color: #ffcccc;
+    color: #cc0000;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #cc0000;
+    border-radius: 10px;
+    animation: flash 1s infinite;
+  }
+  
+  .warning::before {
+    content: "\26A0"; 
+    font-size: 24px;
+    display: block; 
+    margin-bottom: 10px; 
+  }
